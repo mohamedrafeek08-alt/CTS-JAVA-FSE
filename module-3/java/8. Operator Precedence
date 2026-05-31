@@ -1,0 +1,25 @@
+public class OperatorPrecedence
+{
+	public static void main(String[] args) {
+	    int expression1 = (10*2)+16-5/5;
+	    int expression2 = (10 + 5) * 2;
+	    int expression3 = (10%4)+7-6*2;
+	    System.out.println(expression1);
+	    System.out.println(expression2);
+	    System.out.println(expression3);
+	}
+}
+
+EXPLANATION
+OperatorPrecedence works just like BODMAS rule in Mathematics.
+priority oder is: () , ++ or --, * / % , + -
+for expression1:
+step-1: first bracket so , (10*2) = 20
+step - 2 : / so,5/5 = 1
+expression1 = 20 + 16 - 1
+
+step - 4: 20+16 = 36
+
+step 5 : 36 - 1 = 35
+
+output = 35
