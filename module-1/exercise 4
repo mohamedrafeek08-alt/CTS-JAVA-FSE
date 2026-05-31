@@ -1,0 +1,21 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333333;
+}
+header {
+    background: linear-gradient(to right, blue, purple);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.section {
+    background-color: rgba(0, 123, 255, 0.3);
+    padding: 20px;
+    margin: 20px;
+}
+h2 {
+    color: #ff6600;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Column Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>
+        Community Bulletin
+    </h1>
+    <div class="newsArticle">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus feugiat, nisi at fermentum malesuada, lacus erat
+        faucibus purus, sed tincidunt nulla velit vel orci.
+        Integer nec libero at ipsum tincidunt tristique.
+
+        Curabitur ac turpis vel augue suscipit vulputate.
+        Donec vitae lorem non elit gravida consequat.
+        Praesent eget nisl nec nunc feugiat tincidunt.
+        Sed at dui vel erat volutpat volutpat.
+    </div>
+</body>
+</html>
+
+
+
+
+
+//CSS
+.newsArticle {
+
+    column-count: 2;
+
+    column-gap: 30px;
+
+    column-rule: 1px solid gray;
+
+    padding: 20px;
+
+    font-size: 18px;
+
+    text-align: justify;
+}
+
