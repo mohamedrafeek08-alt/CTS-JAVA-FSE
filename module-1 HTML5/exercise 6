@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback</title>
+    <style>
+        .box{
+            width:350px;
+            margin:auto;
+            border:1px solid black;
+            padding:20px;
+        }
+        input,select,textarea{
+            width:100%;
+            margin-bottom:10px;
+        }
+        img{
+            width:200px;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Event Feedback</h2>
+        <label>Phone Number:</label>
+        <input type="text"
+               id="phone"
+               onblur="validatePhone()"
+               placeholder="Enter phone number">
+        <label>Select Event:</label>
+        <select onchange="showFee(this.value)">
+            <option value="">Select Event</option>
+            <option value="500">Music Event</option>
+            <option value="300">Sports Event</option>
+            <option value="200">Food Festival</option>
+        </select>
+        <p id="fee"></p>
+        <label>Feedback:</label>
+        <textarea id="feedback"
+                  rows="4"
+                  onkeyup="countChar()"
+                  placeholder="Enter feedback">
+        </textarea>
+        <p>
+            Characters: <span id="count">0</span>
+        </p>
+        <button onclick="submitForm()">
+            Submit
+        </button>
+        <p id="msg"></p>
+        <h3>Double Click Image</h3>
+        <img src="https://via.placeholder.com/200x150"
+             id="img"
+             ondblclick="enlargeImg()">
+    </div>
+    <script>
+        function validatePhone(){
+            let phone =
+            document.getElementById("phone").value;
+            if(phone.length != 10){
+                alert("Invalid Phone Number");
+            }
+        }
+        function showFee(value){
+            document.getElementById("fee").innerHTML =
+            "Event Fee: ₹" + value;
+        }
+        function submitForm(){
+            document.getElementById("msg").innerHTML =
+            "Feedback Submitted";
+        }
+        function enlargeImg(){
+            document.getElementById("img").style.width =
+            "300px";
+        }
+        function countChar(){
+            let text =
+            document.getElementById("feedback").value;
+            document.getElementById("count").innerHTML =
+            text.length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Preferences</title>
+    <style>
+        .box{
+            width:350px;
+            margin:auto;
+            border:1px solid black;
+            padding:20px;
+        }
+        select,button{
+            width:100%;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body onload="loadPreference()">
+    <div class="box">
+        <h2>User Preferences</h2>
+        <label>Select Event Type:</label>
+        <select id="eventType"
+                onchange="savePreference()">
+            <option value="">Select Event</option>
+            <option>Music Event</option>
+            <option>Sports Event</option>
+            <option>Food Festival</option>
+        </select>
+        <button onclick="clearData()">
+            Clear Preferences
+        </button>
+    </div>
+    <script>
+        function savePreference(){
+            let event =
+            document.getElementById("eventType").value;
+            localStorage.setItem("eventType", event);
+            sessionStorage.setItem("eventType", event);
+        }
+        function loadPreference(){
+            let savedEvent =
+            localStorage.getItem("eventType");
+            if(savedEvent){
+                document.getElementById("eventType").value =
+                savedEvent;
+            }
+        }
+        function clearData(){
+            localStorage.clear();
+            sessionStorage.clear();
+            alert("Preferences Cleared");
+        }
+    </script>
+</body>
+</html>

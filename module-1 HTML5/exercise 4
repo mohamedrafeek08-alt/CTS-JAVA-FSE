@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Event Gallery</title>
+    <style>
+        .eventImage {
+            border: 3px solid blue;
+            width: 200px;
+            height: 150px;
+        }
+        table {
+            margin: auto;
+        }
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">
+        Community Events Gallery
+    </h1>
+    <table>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Music Event"
+                     title="Music Event"
+                     class="eventImage">
+                <p>
+                    Music Festival
+                </p>
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Food Festival"
+                     title="Food Festival"
+                     class="eventImage">
+                <p>
+                    Food Festival
+                </p>
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Sports Event"
+                     title="Sports Event"
+                     class="eventImage">
+                <p>
+                    Sports Event
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Art Show"
+                     title="Art Show"
+                     class="eventImage">
+                <p>
+                    Art Exhibition
+                </p>
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Dance Event"
+                     title="Dance Event"
+                     class="eventImage">
+                <p>
+                    Dance Program
+                </p>
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/200x150"
+                     alt="Book Fair"
+                     title="Book Fair"
+                     class="eventImage">
+                <p>
+                    Book Fair
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
