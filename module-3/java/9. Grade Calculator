@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the Mark: ");
+        int marks = s.nextInt();
+        if(marks>=90)
+        {
+            System.out.println("A");
+        }
+        else if(marks<=89 && marks>=80)
+        {
+            System.out.println("B");
+        }
+        else if(marks<=79 && marks >=70)
+        {
+            System.out.println("C");
+        }
+        else if(marks<=69 && marks>=60)
+        {
+            System.out.println("D");
+        }
+        else
+        {
+            System.out.println("F");
+        }
+        s.close();
+    }
+}
