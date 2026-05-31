@@ -1,0 +1,26 @@
+public class MethodOverloading  
+{
+	public static void main(String[] args) 
+	{
+		overloadclass obj = new overloadclass();
+		System.out.println(obj.add(7, 8));
+		System.out.println(obj.add(77.85, 8000.0));
+		System.out.println(obj.add(7, 9, 1));
+	}
+}
+
+class overloadclass
+{
+	int add(int a,int b)
+	{
+		return a+b;
+	}
+	double add(double a,double b)
+	{
+	    return a+b;
+	}
+	int add(int a,int b,int c)
+	{
+		return a+b+c;
+	}
+}
