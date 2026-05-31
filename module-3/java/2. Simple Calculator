@@ -1,0 +1,31 @@
+import java.util.*;
+public class simpleCalculator
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the first Number: ");
+		int n1 = s.nextInt();
+		System.out.print("Enter the second Number: ");
+		int n2 = s.nextInt();
+		System.out.print("Enter the Operation to perform: ");
+		char c = s.next().charAt(0);
+		switch(c)
+		{
+		    case '+':
+		        System.out.println("The Addition of two numbers is: " +(n1+n2));
+		        break;
+		    case '-':
+		        System.out.println("The Subraction of two numbers is: " +(n1-n2));
+		        break;
+		    case '*':
+		        System.out.println("The Multiplication of two numbers is: " +(n1*n2));
+		        break;
+		    case '/':
+		        System.out.println("The Division of two numbers is: " +(n1/n2));
+		        break;
+		    default:
+		        System.out.println("Enter the valid operation");
+		        break;
+		}
+	}
+}
