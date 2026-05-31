@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Objects</title>
+</head>
+<body>
+    <h2>Event Details</h2>
+    <div id="result"></div>
+    <script>
+        class Event{
+            constructor(name, seats){
+                this.name = name;
+                this.seats = seats;
+            }
+        }
+        Event.prototype.checkAvailability =
+        function(){
+            if(this.seats > 0){
+                return "Seats Available";
+            } else {
+                return "Event Full";
+            }
+        }
+        let event1 =
+        new Event("Music Festival", 20);
+        let output = "";
+        Object.entries(event1).forEach(function(item){
+            output += `
+            <p>
+                ${item[0]} :
+                ${item[1]}
+            </p>
+            `;
+        });
+        output += `
+        <p>
+            ${event1.checkAvailability()}
+        </p>
+        `;
+        document.getElementById("result").innerHTML =
+        output;
+    </script>
+</body>
+</html>

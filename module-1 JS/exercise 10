@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern JavaScript</title>
+</head>
+<body>
+    <h2>Community Events</h2>
+    <div id="result"></div>
+    <script>
+        const events = [
+            {
+                name:"Music Festival",
+                category:"Music"
+            },
+            {
+                name:"Food Carnival",
+                category:"Food"
+            },
+            {
+                name:"Sports Event",
+                category:"Sports"
+            }
+        ];
+        const copiedEvents = [...events];
+        function filterEvents(category = "Music"){
+            return copiedEvents.filter(event =>
+                event.category == category
+            );
+        }
+        const filtered =
+        filterEvents();
+        filtered.forEach(event => {
+            const {name, category} = event;
+            document.getElementById("result")
+            .innerHTML +=
+            <p>
+                ${name} - ${category}
+            </p>
+            `;
+        });
+    </script>
+</body>
+</html>

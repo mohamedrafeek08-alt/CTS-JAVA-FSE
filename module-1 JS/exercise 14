@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Example</title>
+    <style>
+        .card{
+            width:250px;
+            border:1px solid black;
+            padding:10px;
+            margin:10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Community Events</h2>
+    <div class="card" id="eventCard">
+        <h3>Music Festival</h3>
+        <p>Register for the upcoming event</p>
+    </div>
+    <button id="registerBtn">
+        Register
+    </button>
+    <button id="hideBtn">
+        Fade Out
+    </button>
+    <button id="showBtn">
+        Fade In
+    </button>
+    <script>
+        $("#registerBtn").click(function(){
+            alert("Registration Successful");
+        });
+        $("#hideBtn").click(function(){
+            $("#eventCard").fadeOut();
+        });
+        $("#showBtn").click(function(){
+            $("#eventCard").fadeIn();
+        });
+    </script>
+</body>
+</html>

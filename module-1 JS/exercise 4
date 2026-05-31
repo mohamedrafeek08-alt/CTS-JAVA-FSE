@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Functions</title>
+</head>
+<body>
+    <h2>Community Events</h2>
+    <div id="result"></div>
+    <script>
+        let events = [];
+        function addEvent(name, category){
+            events.push({
+                name:name,
+                category:category
+            });
+        }
+        function registerUser(eventName){
+            console.log("User Registered for " + eventName);
+        }
+        function filterEventsByCategory(category, callback){
+            let filtered = events.filter(function(event){
+                return event.category == category;
+            });
+            callback(filtered);
+        }
+        function registrationTracker(){
+            let count = 0;
+            return function(){
+                count++;
+                return count;
+            }
+        }
+        let musicRegistration =
+        registrationTracker();
+        addEvent("Music Festival", "Music");
+        addEvent("Food Carnival", "Food");
+        addEvent("Dance Show", "Music");
+        registerUser("Music Festival");
+        console.log(
+            "Music Registrations: " +
+            musicRegistration()
+        );
+        filterEventsByCategory(
+            "Music",
+            function(result){
+                result.forEach(function(event){
+                    document.getElementById("result").innerHTML +=
+                    `<p>${event.name}</p>`;
+                });
+            }
+        );
+    </script>
+</body>
+</html>

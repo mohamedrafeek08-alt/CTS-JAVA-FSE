@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+    <style>
+        .card{
+            border:1px solid black;
+            padding:10px;
+            margin:10px;
+            width:250px;
+        }
+        input,select{
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Community Events</h2>
+    <input type="text"
+           id="search"
+           placeholder="Search Event"
+           onkeydown="searchEvent()">
+    <select onchange="filterEvent(this.value)">
+        <option value="All">All</option>
+        <option value="Music">Music</option>
+        <option value="Food">Food</option>
+        <option value="Sports">Sports</option>
+    </select>
+    <div id="events"></div>
+    <script>
+        let events = [
+            {
+                name:"Music Festival",
+                category:"Music"
+            },
+            {
+                name:"Food Carnival",
+                category:"Food"
+            },
+            {
+                name:"Sports Event",
+                category:"Sports"
+            }
+        ];
+        function displayEvents(data){
+            let output = "";
+            data.forEach(function(event){
+                output += `
+                <div class="card">
+                    <h3>${event.name}</h3>
+                    <p>${event.category}</p>
+                    <button onclick="registerEvent()">
+                        Register
+                    </button>
+                </div>
+                `;
+            });
+            document.getElementById("events").innerHTML =
+            output;
+        }
+        displayEvents(events);
+        function registerEvent(){
+            alert("Registration Successful");
+        }
+        function filterEvent(category){
+            if(category == "All"){
+                displayEvents(events);
+            } else {
+                let filtered =
+                events.filter(function(event){
+                    return event.category == category;
+                });
+                displayEvents(filtered);
+            }
+        }
+        function searchEvent(){
+            let text =
+            document.getElementById("search").value
+            .toLowerCase();
+            let filtered =
+            events.filter(function(event){
+                return event.name.toLowerCase()
+                .includes(text);
+            });
+            displayEvents(filtered);
+        }
+    </script>
+</body>
+</html>

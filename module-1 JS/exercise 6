@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Events</title>
+</head>
+<body>
+    <h2>Music Events</h2>
+    <div id="result"></div>
+    <script>
+        let events = [];
+        events.push(
+            "Music Concert"
+        );
+        events.push(
+            "Workshop on Baking"
+        );
+        events.push(
+            "Music Festival"
+        );
+        let musicEvents =
+        events.filter(function(event){
+            return event.includes("Music");
+        });
+        let displayCards =
+        musicEvents.map(function(event){
+            return `
+            <p>
+                ${event}
+            </p>
+            `;
+        });
+        document.getElementById("result").innerHTML =
+        displayCards.join("");
+    </script>
+</body>
+</html>

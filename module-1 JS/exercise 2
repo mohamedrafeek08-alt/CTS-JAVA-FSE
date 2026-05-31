@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Details</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <script>
+        const eventName = "Music Festival";
+        const eventDate = "10 June 2026";
+        let seats = 50;
+        seats--;
+        let info = `
+        Event: ${eventName} <br>
+        Date: ${eventDate} <br>
+        Available Seats: ${seats}
+        document.getElementById("result").innerHTML =
+        info;
+    </script>
+</body>
+</html>

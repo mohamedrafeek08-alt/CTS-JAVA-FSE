@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <style>
+        .box{
+            width:350px;
+            margin:auto;
+            border:1px solid black;
+            padding:20px;
+        }
+        input,select{
+            width:100%;
+            margin-bottom:10px;
+        }
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Event Registration</h2>
+        <form id="eventForm">
+            <input type="text"
+                   name="name"
+                   placeholder="Enter Name">
+            <p id="nameError" class="error"></p>
+            <input type="email"
+                   name="email"
+                   placeholder="Enter Email">
+            <p id="emailError" class="error"></p>
+            <select name="event">
+                <option value="">
+                    Select Event
+                </option>
+                <option>
+                    Music Event
+                </option>
+                <option>
+                    Sports Event
+                </option>
+            </select>
+            <p id="eventError" class="error"></p>
+            <button type="submit">
+                Register
+            </button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("eventForm")
+        .addEventListener("submit", function(event){
+            event.preventDefault();
+            let form = event.target;
+            let name =
+            form.elements["name"].value;
+            let email =
+            form.elements["email"].value;
+            let selectedEvent =
+            form.elements["event"].value;
+            document.getElementById("nameError")
+            .innerHTML = "";
+            document.getElementById("emailError")
+            .innerHTML = "";
+            document.getElementById("eventError")
+            .innerHTML = "";
+            let valid = true;
+            if(name == ""){
+                document.getElementById("nameError")
+                .innerHTML = "Enter Name";
+                valid = false;
+            }
+            if(email == ""){
+                document.getElementById("emailError")
+                .innerHTML = "Enter Email";
+                valid = false;
+            }
+            if(selectedEvent == ""){
+                document.getElementById("eventError")
+                .innerHTML = "Select Event";
+                valid = false;
+            }
+            if(valid){
+                alert("Registration Successful");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event List</title>
+</head>
+<body>
+    <h2>Upcoming Events</h2>
+    <div id="events"></div>
+    <script>
+        let eventList = [
+            {
+                name:"Music Event",
+                seats:10,
+                upcoming:true
+            },
+            {
+                name:"Food Festival",
+                seats:0,
+                upcoming:true
+            },
+            {
+                name:"Sports Event",
+                seats:20,
+                upcoming:false
+            }
+        ];
+        eventList.forEach(function(event){
+            if(event.upcoming && event.seats > 0){
+                document.getElementById("events").innerHTML +=
+                <p>
+                    ${event.name} -
+                    Seats: ${event.seats}
+                </p>
+                `;
+            }
+        });
+        function registerEvent(event){
+            try{
+                if(event.seats <= 0){
+                    throw "No Seats Available";
+                }
+                event.seats--;
+                console.log("Registration Successful");
+            } catch(error){
+                console.log(error);
+            }
+        }
+        registerEvent(eventList[0]);
+    </script>
+</body>
+</html>
