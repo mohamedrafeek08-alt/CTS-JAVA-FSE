@@ -1,0 +1,30 @@
+import java.util.*;
+interface Playable
+{
+    void play();
+}
+class Guitar implements Playable
+{
+    @Override
+    public void play()
+    {
+        System.out.println("This is the sound played from guitar..");
+    }
+}
+class Piano implements Playable
+{
+    @Override
+    public void play()
+    {
+        System.out.println("This is the sound played from Piano..");
+    }
+}
+public class Interface
+{
+	public static void main(String[] args) {
+		Guitar g = new Guitar();
+		Piano p = new Piano();
+		g.play();
+		p.play();
+	}
+}
