@@ -1,0 +1,29 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        HashMap<Integer, String> students = new HashMap<>();
+
+        students.put(101, "Rafeek");
+        students.put(102, "Arun");
+        students.put(103, "Vijay");
+
+        System.out.println("Enter Student ID:");
+
+        int id = scan.nextInt();
+
+        if(students.containsKey(id)) {
+
+            System.out.println(students.get(id));
+
+        } else {
+
+            System.out.println("ID Not Found");
+        }
+    }
+}
