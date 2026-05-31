@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link and List Styling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <ul class="city-list">
+        <li>Chennai</li>
+        <li>Coimbatore</li>
+        <li>Madurai</li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+//CSS
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: green;
+}
+a:visited {
+    color: purple;
+}
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+.nav-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+.city-list {
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 20px;
+    padding: 10px;
+}
+.city-list li {
+    padding: 5px;
+    margin: 5px;
+}

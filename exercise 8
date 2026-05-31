@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="eventCard">
+        <h2>
+            Music Event
+        </h2>
+        <p>
+            This card uses margin, padding, and border.
+        </p>
+    </div>
+    <form>
+        <input type="text"
+               class="selectedField"
+               placeholder="Enter Name">
+    </form>
+    <div class="hiddenBox">
+        Hidden using visibility
+    </div>
+    <div class="noneBox">
+        Hidden using display none
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+//CSS
+.eventCard {
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 30px;
+    background-color: lightgray;
+}
+.selectedField {
+    padding: 10px;
+    outline: 3px solid red;
+}
+.hiddenBox {
+    visibility: hidden;
+    background-color: yellow;
+    padding: 10px;
+}
+.noneBox {
+    display: none;
+    background-color: pink;
+    padding: 10px;
+}
+

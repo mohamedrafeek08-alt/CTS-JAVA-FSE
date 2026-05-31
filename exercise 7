@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Styling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>
+        Event Details
+    </h2>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>Music Show</td>
+            <td>10 June</td>
+            <td>Chennai</td>
+        </tr>
+        <tr>
+            <td>Food Festival</td>
+            <td>15 June</td>
+            <td>Madurai</td>
+        </tr>
+        <tr>
+            <td>Tech Expo</td>
+            <td>20 June</td>
+            <td>Coimbatore</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+//CSS
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+}
+th {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+}
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
