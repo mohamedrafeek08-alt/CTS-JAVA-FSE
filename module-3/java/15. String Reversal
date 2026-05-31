@@ -1,0 +1,21 @@
+import java.util.*;
+public class StringReversal
+{
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the String to be reversed: ");
+        String s1 = s.nextLine();
+        //by using String and Loops
+        // String s2 = "";
+        // for(int i=s1.length()-1;i>=0;i--)
+        // {
+        //     s2 = s2 + s1.charAt(i);
+        // }
+        // System.out.println("The reversed String is: " + s2);
+        //by using StringBuilder
+        StringBuilder sb = new StringBuilder(s1);
+        sb.reverse();
+        System.out.println("the reversed string is " + sb.toString());
+    }
+}
