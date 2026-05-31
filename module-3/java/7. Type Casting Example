@@ -1,0 +1,9 @@
+public class TypeCasting
+{
+	public static void main(String[] args) {
+	    double a = 1234.99;
+	    int b = 10;
+		System.out.println("The Double is converted into int: "+ (int)a);
+		System.out.println("The Int is converted into Double: "+ (double)b);
+	}
+}
